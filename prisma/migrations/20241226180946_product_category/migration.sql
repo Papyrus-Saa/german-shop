@@ -22,7 +22,7 @@ CREATE TABLE "Product" (
     "sizes" "Size"[] DEFAULT ARRAY[]::"Size"[],
     "slug" TEXT NOT NULL,
     "tags" TEXT[] DEFAULT ARRAY[]::TEXT[],
-    "genger" "Gender" NOT NULL,
+    "gender" "Gender" NOT NULL,
     "categoryId" TEXT NOT NULL,
 
     CONSTRAINT "Product_pkey" PRIMARY KEY ("id")
@@ -35,7 +35,7 @@ CREATE UNIQUE INDEX "Category_name_key" ON "Category"("name");
 CREATE UNIQUE INDEX "Product_slug_key" ON "Product"("slug");
 
 -- CreateIndex
-CREATE INDEX "Product_genger_idx" ON "Product"("genger");
+CREATE INDEX "Product_gender_idx" ON "Product"("gender");
 
 -- AddForeignKey
 ALTER TABLE "Product" ADD CONSTRAINT "Product_categoryId_fkey" FOREIGN KEY ("categoryId") REFERENCES "Category"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
