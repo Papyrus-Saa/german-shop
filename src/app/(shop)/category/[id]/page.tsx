@@ -14,9 +14,9 @@ interface Props {
 }
 
 // Página asíncrona en Next.js 15
-export default async function Page({ params }: Props) {
+export default  function Page({ params }: Props) {
   // Acceso asíncrono a `params`
-  const { id } = await params;
+  const { id } =  params;
 
   const Products = seedProducts.filter( product => product.gender === id);
 
