@@ -1,5 +1,3 @@
-// import { notFound } from "next/navigation";
-
 import ProductGrid from "@/components/products/product-grid/ProductGrid";
 import { Title } from "@/components/ui/title/Title";
 import { category } from "@/interfaces/product.interface";
@@ -13,10 +11,9 @@ interface Props {
   };
 }
 
-// Página asíncrona en Next.js 15
-export default function Page({ params }: Props) {
-  // Acceso asíncrono a `params`
-  const { id } = params;
+export default async function Page({ params }: Props) {
+  // Accede a params de manera asincrónica
+  const { id } = await params;
 
   const Products = seedProducts.filter((product) => product.gender === id);
 
@@ -26,10 +23,6 @@ export default function Page({ params }: Props) {
     kid: "Kid",
     unisex: "Unisex",
   };
-
-  // if( id === 'kids') {
-  //  notFound();
-  // }
 
   return (
     <>
