@@ -1,12 +1,11 @@
-# Descripcion
+# Description
 
-## Correr en dev
+## Run in Development
 
-
-1. Clonar el repositorio
-2. Crear una copia de el ```.env.template ``` y renombrarlo a ``` .env``` y cambiar las variables de entorno
-3. Instalar dependencias ``` npm intall```
-4. Levantar la base de datos ``` docker compose up -d```
-5. Correr las migraciones de Prisma ``` npx prisma migrate dev```
-6. Ejecutar seed ``` npm run seed```
-7. Correr el proyecto ``` npm run dev ```
+1. Clone the repository.
+2. Create a copy of the ```.env.template``` file, rename it to ```.env```, and update the environment variables.
+3. Install dependencies: ```npm install```
+4. Start the database: ```docker compose up -d```
+5. Run Prisma migrations: ```npx prisma migrate dev```
+6. Execute the seed script: ```npm run seed```
+7. Start the project: ```npm run dev```
