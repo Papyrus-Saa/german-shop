@@ -3,6 +3,7 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import { IoCardOutline } from 'react-icons/io5';
 import { Title } from '@/components/ui/title/Title';
+import { category } from '@/interfaces/product.interface';
 
 const productsInCart = [
   initialData.products[0],
@@ -11,9 +12,9 @@ const productsInCart = [
 ];
 
 interface Props {
-  params: {
-    id: string;
-  };
+ params: Promise<{
+  id: category
+ }>
 }
 
 export default async function Page({ params }: Props) {

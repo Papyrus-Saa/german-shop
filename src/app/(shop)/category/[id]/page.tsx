@@ -6,10 +6,11 @@ import { initialData } from "@/seed/seed";
 const seedProducts = initialData.products;
 
 interface Props {
-  params: {
+  params: Promise<{
     id: category;
-  };
+  }>;
 }
+
 
 export default async function Page({ params }: Props) {
   // Accede a params de manera asincrónica
